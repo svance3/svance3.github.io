@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <title>ITIS3135 - Welcome</title>
+        
     <style>
           head, body, main {
             width:100%;
@@ -21,11 +22,21 @@
             text-decoration:none;
             float:right;
         }
+        hr {
+            width: 200px;
+        }
+        #clock {
+            font-style: italic;
+        }
     </style>
     </head>
     <body>
         <main>
             <img src="https://www.farawayforests.com/assets/images/itis3135/itworks.gif" alt="It works!" style="margin-top:100px;" />
+            <hr />
+            <span id="clock"></span>
+            <hr />
+            <a href="itis3135/">Click to go to ITIS3135 Site</a>
         </main>
         <footer>
             <a href="http://validator.w3.org/check?uri=referer">
@@ -35,5 +46,17 @@
                 <img src="https://www.farawayforests.com/assets/images/itis3135/css_validation_button.gif" alt="Validate CSS" />
             </a>
         </footer>
+        
+        <script>
+            var clock = document.getElementById("clock");
+
+            setInterval( function () {
+              var td = new Date();
+              var meridien = "AM";
+              if (td.getHours() > 12) meridien = "PM";
+              clock.innerText = (td.getHours() + " : " + td.getMinutes() + " : " + td.getSeconds() + " " + meridien);
+            } , 1000 );
+        </script>
+
     </body>
 </html>
