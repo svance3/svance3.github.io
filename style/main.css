@@ -1,0 +1,10 @@
+/*Main Style Sheet*/
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+footer a {
+    text-decoration:none;
+    float:right;
+}
