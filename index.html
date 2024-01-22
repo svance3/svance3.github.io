@@ -17,10 +17,12 @@
             position:absolute;
             bottom:0;
             width:100%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
         }
         footer a {
             text-decoration:none;
-            float:right;
         }
         hr {
             width: 200px;
@@ -39,15 +41,21 @@
             <a href="itis3135/">Click to go to ITIS3135 Site</a>
         </main>
         <footer>
-            <a href="http://validator.w3.org/check?uri=referer">
-                <img src="https://www.farawayforests.com/assets/images/itis3135/html_validation_button.gif" alt="Validate HTML" />
+            <a href="itis3135/stellarveery.com/" >
+                <img src="https://www.farawayforests.com/assets/images/itis3135/stellarveery_tiny.png" alt="Stellar Veery Logo" style="width:60%;max-width:700px;"  />
             </a>
-            <a href="http://jigsaw.w3.org/css-validator/check/referer">
-                <img src="https://www.farawayforests.com/assets/images/itis3135/css_validation_button.gif" alt="Validate CSS" />
+            <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+                <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!" />
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
             </a>
         </footer>
         
         <script>
+            document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+            
             var clock = document.getElementById("clock");
 
             setInterval( function () {
