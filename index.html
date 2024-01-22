@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <meta name="author" content="Seth Vance" />
         <meta name="description" content="ITIS3135 WebPage" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-        <title>ITIS3135 - Welcome</title>
-        
-    <style>
-          head, body, main {
-            width:100%;
-            margin:0 auto;
-            text-align:center;
-          }
-        footer {
-            position:absolute;
-            bottom:0;
-            width:100%;
-        }
-        footer a {
-            text-decoration:none;
-            float:right;
-        }
-        hr {
-            width: 200px;
-        }
-        #clock {
-            font-style: italic;
-        }
-    </style>
+        <link rel="stylesheet" href="style/default.css" />
+        <title>Seth Vance's Stellar Veery || ITIS 3135 Homepage</title>
     </head>
     <body>
-        <main>
-            <img src="https://www.farawayforests.com/assets/images/itis3135/itworks.gif" alt="It works!" style="margin-top:100px;" />
+        <header>
+            <h1 class="contain">Seth Vance's Stellar Veery || ITIS 3135</h1>
+            <nav class="contain top">
+                <a href="./" class="active">Home</a>
+                <a href="introduction.html">Introduction</a>
+                <a href="contract.html">Contract</a>
+            </nav>
+        </header>
+        <main class="contain">
+            <h2>Seth Vance's Stellar Veery || ITIS 3135 Homepage</h2>
             <hr />
-            <span id="clock"></span>
-            <hr />
-            <a href="itis3135/">Click to go to ITIS3135 Site</a>
+            <figure>
+                <img style="margin-top:20px;" src="https://web.archive.org/web/20091022015919/http://www.geocities.com/ppsknet/construction.gif" />
+                <figcaption>For More Fun GIFs Visit <a target="_blank" href="https://gifcities.org/">GIF Cities</a></figcaption>
+            </figure>
+            <p>Nothing much to see here... but thanks for stopping by!</p>
         </main>
-        <footer>
-            <a href="http://validator.w3.org/check?uri=referer">
-                <img src="https://www.farawayforests.com/assets/images/itis3135/html_validation_button.gif" alt="Validate HTML" />
+        <footer class="lowcontent">
+            <a class="sv sidewings" href="stellarveery.com/" target="_blank">
+                <img class="sparkle" src="https://web.archive.org/web/20091027020020/http://geocities.com/denash.geo/sparkle.gif" alt="Star Pattern" />
+                <img class="svdlogo" src="https://www.farawayforests.com/assets/images/itis3135/stellarveery_tiny.png" alt="Stellar Veery Logo" />
+                <img class="sparkle" src="https://web.archive.org/web/20091027020020/http://geocities.com/denash.geo/sparkle.gif" alt="Star Pattern" />
             </a>
-            <a href="http://jigsaw.w3.org/css-validator/check/referer">
-                <img src="https://www.farawayforests.com/assets/images/itis3135/css_validation_button.gif" alt="Validate CSS" />
-            </a>
+            <nav class="contain">
+                <a target="_blank" href="https://webpages.uncc.edu/svance3/">UNCC Webpages</a>
+                <a target="_blank" href="https://github.com/svance3">Github</a>
+                <a target="_blank" href="https://svance3.github.io">Github Pages</a>
+                <a target="_blank" href="https://www.freecodecamp.org/svance3">freeCodeCamp</a>
+                <a target="_blank" href="https://www.codecademy.com/profiles/svance3">Codecademy</a>
+                <a target="_blank" href="https://www.linkedin.com/in/seth-vance-48292b250/">LinkedIn</a>
+                <a target="_blank" href="https://www.farawayforests.com/">My Website</a>
+            </nav>
+            <div class="sidewings">
+                <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+                    <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!" />
+                </a>
+                <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+                    <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+                </a>
+            </div>
         </footer>
-        
+        <!--Update Referer URI For Validation Checking-->
         <script>
-            var clock = document.getElementById("clock");
-
-            setInterval( function () {
-              var td = new Date();
-              var meridien = "AM";
-              if (td.getHours() > 12) meridien = "PM";
-              clock.innerText = (td.getHours() + " : " + td.getMinutes() + " : " + td.getSeconds() + " " + meridien);
-            } , 1000 );
+            document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
         </script>
-
     </body>
 </html>
